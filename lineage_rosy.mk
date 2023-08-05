@@ -30,17 +30,7 @@ ALPHA_MAINTAINER := ShenRn
 
 ifneq ($(TARGET_WITH_GAPPS), false)
 # Full Gapps
-WITH_GAPPS := 2
-
-# Google telephony
-TARGET_USE_GOOGLE_TELEPHONY := true
-
-# Google NGA
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-
-# Remove Gapps packages
-PRODUCT_PACKAGES += RemovePackages
-endif
+WITH_GAPPS := 1
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_rosy
