@@ -28,10 +28,6 @@ $(call inherit-product, device/xiaomi/rosy/device.mk)
 # Build Maintainer
 ALPHA_MAINTAINER := ShenRn
 
-ifneq ($(TARGET_WITH_GAPPS), false)
-# Full Gapps
-WITH_GAPPS := 1
-
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_rosy
 PRODUCT_DEVICE := rosy
