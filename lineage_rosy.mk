@@ -19,11 +19,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
-# Inherit some common LineageOS stuff
+# Inherit some common Alphadroid stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from rosy device
 $(call inherit-product, device/xiaomi/rosy/device.mk)
+
+# Build Maintainer
+ALPHA_MAINTAINER := ShenRn
+
+ifneq ($(TARGET_WITH_GAPPS), false)
+# Full Gapps
+WITH_GAPPS := 2
+
+# Google telephony
+TARGET_USE_GOOGLE_TELEPHONY := true
+
+# Google NGA
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+# Remove Gapps packages
+PRODUCT_PACKAGES += RemovePackages
+endif
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_rosy
