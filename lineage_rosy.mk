@@ -25,8 +25,26 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from rosy device
 $(call inherit-product, device/xiaomi/rosy/device.mk)
 
+# Chipset
+RISING_CHIPSET := "snapdragon 625"
+
 # Build Maintainer
-ALPHA_MAINTAINER := ShenRn
+RISING_MAINTAINER := "ShenRn"
+
+# vanilla 
+RISING_PACKAGE_TYPE := "VANILLA AOSP"
+
+# Aperture Camera
+TARGET_BUILD_APERTURE_CAMERA := false
+
+# disable/enable blur support
+TARGET_ENABLE_BLUR := true
+
+# UDFPS ICONS/ANIMATIONS
+TARGET_HAS_UDFPS := true
+
+# Spoof build description/fingerprint as pixel device
+TARGET_USE_PIXEL_FINGERPRINT := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_rosy
