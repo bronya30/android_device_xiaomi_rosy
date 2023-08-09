@@ -31,9 +31,6 @@ RISING_CHIPSET := "snapdragon 625"
 # Build Maintainer
 RISING_MAINTAINER := "ShenRn"
 
-# vanilla 
-RISING_PACKAGE_TYPE := "VANILLA AOSP"
-
 # Aperture Camera
 TARGET_BUILD_APERTURE_CAMERA := false
 
