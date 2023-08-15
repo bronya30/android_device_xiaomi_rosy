@@ -2,7 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 # Recovery scripts
 
-nclude $(CLEAR_VARS)
+include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.qcom_ramdisk
 LOCAL_MODULE_STEM  := fstab.qcom
 LOCAL_MODULE_TAGS  := optional
