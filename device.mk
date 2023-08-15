@@ -31,6 +31,10 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 # APEX
 PRODUCT_COMPRESSED_APEX := false
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
@@ -355,7 +359,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
+    fstab.qcom_ramdisk \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
