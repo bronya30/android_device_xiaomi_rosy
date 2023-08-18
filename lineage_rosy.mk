@@ -25,6 +25,21 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from rosy device
 $(call inherit-product, device/xiaomi/rosy/device.mk)
 
+# Chipset
+RISING_CHIPSET := "snapdragon 450"
+
+# Build Maintainer
+RISING_MAINTAINER := "ShenRn"
+
+# Aperture Camera
+TARGET_BUILD_APERTURE_CAMERA := false
+
+# disable/enable blur support
+TARGET_ENABLE_BLUR := true
+
+# UDFPS ICONS/ANIMATIONS
+TARGET_HAS_UDFPS := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_rosy
 PRODUCT_DEVICE := rosy
